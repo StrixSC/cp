@@ -27,13 +27,36 @@ class Solution:
             
 
         return root
+    
+    def addTwoNumbersCorrection(self, l1: ListNode, l2: ListNode):
+        carry = 0
+        root = current = ListNode(-1)
+        while l1 or l2:
+            v1 = v2 = 0
+            if l1:
+                v1 = l1.val
+                l1 = l1.next
+            
+            if l2: 
+                v2 = l2.val
+                l2 = l2.next
+                
+            carry, result = divmod(v1+v2+carry, 10)
+            
+            current.next = ListNode(result)
+            current = current.next
         
+        if carry:
+            current.next = ListNode(carry)
+        
+        return root.next
+    
 if __name__ == "__main__":
     solution = Solution()
     l1 = ListNode(2, next=ListNode(4, next=ListNode(3)))
     l2 = ListNode(5, next=ListNode(6, next=ListNode(4)))
     sol = []
-    solved = solution.addTwoNumbers(l1, l2)
+    solved = solution.addTwoNumbersCorrection(l1, l2)
     node = solved
     while node:
         sol.append(node.val)
