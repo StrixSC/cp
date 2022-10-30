@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.tmp;
 
 public class MaxProfit {
     public int maxProfit(int[] prices) {
