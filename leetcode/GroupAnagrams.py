@@ -1,25 +1,19 @@
 import os
 import sys
-
+from collections import defaultdict
 class Solution:
     def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
-        sorts = {}
-        for i, word in enumerate(strs):
-            sorted_word = str(sorted(word))
-            arr = sorts.get(sorted_word)
-            if arr is None:
-                arr = []
-            arr.append(i)
-            sorts.update({sorted_word: arr})
+        sorts = defaultdict(list)
+        for word in strs:
+            sorts[str(sorted(word))].append(word)
         
         res = []
-        for value in sorts.values():
+        for words in sorts.values():
             sub_res = []
-            for index in value:
-                sub_res.append(strs[index])
+            for word in words:
+                sub_res.append(word)
             res.append(sub_res)
-        print(res)
-        
+        return res
 
 def rinput():
 	data = input()
