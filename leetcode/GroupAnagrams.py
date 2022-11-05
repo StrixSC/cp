@@ -6,14 +6,7 @@ class Solution:
         sorts = defaultdict(list)
         for word in strs:
             sorts[str(sorted(word))].append(word)
-        
-        res = []
-        for words in sorts.values():
-            sub_res = []
-            for word in words:
-                sub_res.append(word)
-            res.append(sub_res)
-        return res
+        return list(sorts.values())
 
 def rinput():
 	data = input()
