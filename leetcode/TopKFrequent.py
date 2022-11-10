@@ -42,11 +42,11 @@ class Solution:
 
     def topKFrequentBucketsCounter(self, nums: list[int], k: int) -> list[int]:
         from collections import Counter
-        import itertools
-        buckets = []*len(nums)
+        from itertools import chain
+        buckets = [[] for _ in nums]
         for key, freq in Counter(nums).items():
-            buckets[freq].append(key)
-        return list(itertools.chain(*buckets))[:k]
+            buckets[-freq].append(key)
+        return list(chain(*buckets))[:k]
 
 
 def rinput():
@@ -55,8 +55,8 @@ def rinput():
 
 if __name__ == "__main__":
 	solution = Solution()
-	# res = solution.topKFrequentBucketSort([1,1,1,2,2,3,3,3,3], k=2)
-	res = solution.topKFrequentBucketsCounter([1,2], k=2)
+	# res = solution.topKFrequentBucketsCounter([1], k=1)
+	res = solution.topKFrequentBucketsCounter([3,0,1,0], k=1)
 	print(res)
 
 # input: 2,7,11,15,9
