@@ -2,6 +2,9 @@ import os
 import sys
 
 class Solution:
+    """
+    This solution had the best runtime/mem consumption
+    """
     def topKFrequent(self, nums: list[int], k: int) -> list[int]:
         from collections import defaultdict
         freqs = defaultdict(int)
