@@ -20,12 +20,12 @@ class Solution:
                     if seen[v] + left + right == 0 and [seen[v], left, right] not in res:
                         res.append(seen[v], left, right)
                     
-                    if seen[v] + left + right > 0: 
-                        r += 1
-                    else:
-                        l += 1
+            if seen[v] + left + right > 0: 
+                r += 1
+            else:
+                l += 1
 
-                    seen[l] = left
+            seen[l] = left
 
         return res
     
