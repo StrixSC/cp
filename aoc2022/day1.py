@@ -8,3 +8,10 @@ for line in lines:
     calories.append(sum(list(map(int, calories_clean))))
 
 print(calories[max(range(len(calories)), key=calories.__getitem__)])
+top3 = []
+for i in range(3):
+    index = max(range(len(calories)), key=calories.__getitem__)
+    top3.append(calories[index])
+    del calories[index]
+
+print(sum(top3))
