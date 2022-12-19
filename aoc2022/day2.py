@@ -1,4 +1,4 @@
-calories, data_path = [], "./data/day2.txt"
+data_path = "./data/day2.txt"
 
 # A: Opponent chose rock
 # B: Opponent chose paper
