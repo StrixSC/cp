@@ -1,2 +1,1 @@
-# Coding problems
-Coding problems from various sites
+# Coding problems / Competitive Programming / anything else that acronyms to "cp"
