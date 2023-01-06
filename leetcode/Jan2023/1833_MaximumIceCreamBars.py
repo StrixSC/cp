@@ -6,5 +6,6 @@ class Solution:
                 return i
             elif coins == 0:
                 return i + 1
+        return len(costs)
 
 print(Solution().maxIceCream(costs = [1,3,2,4,1], coins = 7))
