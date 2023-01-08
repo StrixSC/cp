@@ -17,8 +17,8 @@ class Solution:
         return R - L - 1
         
     def longestPalindrome(self, s: str) -> str:
-        # if len(s) == 0 or len(s) == 1 or s == s[::-1]:
-        #     return s
+        if len(s) == 0 or len(s) == 1 or s == s[::-1]:
+            return s
             
         start, end = 0, 0
         for i in range(len(s)):
