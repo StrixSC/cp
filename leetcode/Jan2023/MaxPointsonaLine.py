@@ -7,7 +7,7 @@ class Solution:
             return math.inf
         return (point2[1] - point1[1])/denom
 
-    def maxPoints(self, points: List[List[int]]) -> int:
+    def maxPoints(self, points: list[list[int]]) -> int:
         if len(points) < 2:
             len(points)
         mx = 0
