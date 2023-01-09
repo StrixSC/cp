@@ -14,7 +14,7 @@ class Solution:
                 if len(set(tmp1)) == len(set(tmp2)):
                     return True
 
-        return False 
+        return False  
 
 print(Solution().isItPossible( word1 = "aa", word2 = "bb"))
 print(Solution().isItPossible( word1 = "ac", word2 = "b"))
