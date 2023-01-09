@@ -13,7 +13,7 @@ class Solution:
         mx = 0
         for i in range(len(points)):
             dic = defaultdict(int)
-            for j in range(i+1, len(points)):
+            for j in range(i+1, len(points)): # i+1, because we already computed the slope with i previous points, and we don't need to compute j with itself.
                 slope = self.computeSlope(points[j], points[i])
                 dic[slope] += 1
                 mx = max(mx, dic[slope])
