@@ -1,6 +1,6 @@
 class Solution:
     def minFlipsMonoIncr(self, s: str) -> int:
-        ans = res = sum([1 for char in s if char == '0'])
+        ans = res = s.count('0') # Faster overall runtime
         for char in s:
             if char is '0':
                 res -= 1
