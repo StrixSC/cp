@@ -1,10 +1,7 @@
 package org.strixsc;
 
-import com.sun.org.slf4j.internal.LoggerFactory;
-
 import java.util.HashSet;
 import java.util.Set;
-import java.util.logging.Logger;
 
 public class ContainsDuplicate {
 
