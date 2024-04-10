@@ -1,4 +1,4 @@
-package org.strixsc;
+package org.strixsc.ArraysAndHashing;
 
 import org.apache.commons.lang3.StringUtils;
 

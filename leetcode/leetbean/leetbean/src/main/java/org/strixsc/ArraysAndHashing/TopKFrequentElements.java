@@ -1,4 +1,4 @@
-package org.strixsc;
+package org.strixsc.ArraysAndHashing;
 
 import java.util.*;
 import java.util.stream.Collectors;

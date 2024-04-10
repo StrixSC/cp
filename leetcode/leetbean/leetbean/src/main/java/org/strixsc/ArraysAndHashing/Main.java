@@ -1,4 +1,4 @@
-package org.strixsc;
+package org.strixsc.ArraysAndHashing;
 
 public class Main {
     public static void main(String[] args) {

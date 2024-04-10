@@ -1,4 +1,4 @@
-package org.strixsc;
+package org.strixsc.ArraysAndHashing;
 
 import java.util.HashSet;
 import java.util.Set;
